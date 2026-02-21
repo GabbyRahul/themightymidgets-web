@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "dev.tools.themightymidgets.deeplinktester",
+      "sha256_cert_fingerprints": [
+        "8E:35:56:20:03:6C:B5:3D:34:8E:B8:78:D5:8F:1C:42:37:92:68:40:BC:5B:6A:61:80:F5:8A:FF:C9:8A:E0:51"
+      ]
+    }
+  }
+]
