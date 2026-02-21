@@ -3,45 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Mighty Midgets - Android Developer Portfolio</title>
+    <title>The Mighty Midgets | Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Force the background color even if Tailwind fails to load */
+        html, body { 
+            background-color: #f0f4f8 !important; 
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .jindo-font { font-family: 'Fredoka One', cursive; }
+        
+        @keyframes bounce-logo {
+            0%, 100% { transform: translateY(0) rotate(-3deg); }
+            50% { transform: translateY(-12px) rotate(3deg); }
+        }
+        .animate-bounce-custom { animation: bounce-logo 3s ease-in-out infinite; }
+
+        .app-card { 
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            background: white;
+            border-radius: 2.5rem;
+            border: 4px solid white;
+        }
+        .app-card:hover { 
+            transform: scale(1.04); 
+            box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.2); 
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
-    <header class="py-12 text-center bg-white border-b">
-        <h1 class="text-4xl font-bold text-indigo-600">The Mighty Midgets</h1>
-        <p class="mt-2 text-slate-500">Quality Casual Games & Developer Tools</p>
+<body class="text-[#334155] antialiased">
+
+    <header class="pt-24 pb-16 text-center" style="background: radial-gradient(circle at top, #eef2ff 0%, #f0f4f8 100%);">
+        <div class="inline-block animate-bounce-custom">
+            <div class="bg-white p-5 rounded-[2.5rem] shadow-xl shadow-indigo-100 border-4 border-white relative">
+                <div class="w-20 h-20 bg-indigo-600 rounded-[1.5rem] flex items-center justify-center text-white text-4xl jindo-font shadow-inner">M</div>
+                <div class="absolute -top-1 -right-1 w-6 h-6 bg-pink-500 rounded-full border-4 border-white"></div>
+            </div>
+        </div>
+        <h1 class="text-5xl jindo-font text-indigo-600 mt-8 tracking-tight">The Mighty Midgets</h1>
+        <p class="text-slate-500 font-semibold mt-3 text-lg">Small Apps. Big Fun.</p>
     </header>
 
-    <main class="max-w-4xl mx-auto p-6 grid gap-8 md:grid-cols-2">
-    <div class="bg-white p-6 rounded-xl shadow-sm border flex flex-col justify-between">
-        <div>
-            <h2 class="text-xl font-bold">Tic Tac Toe Free</h2>
-            <p class="text-slate-600 mt-2 text-sm">Modern UI, local multiplayer, and smooth animations.</p>
-        </div>
-        <div class="mt-6 flex flex-col gap-2">
-            <a href="https://play.google.com/store/apps/details?id=com.themightymidgets.tictactoe.free" 
-               class="text-center px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium">Play Store</a>
-            <a href="/privacy-policy.html" class="text-center text-xs text-slate-400 hover:text-indigo-600 underline">Privacy Policy</a>
-        </div>
-    </div>
+    <main class="max-w-6xl mx-auto px-6 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="app-card overflow-hidden shadow-sm flex flex-col">
+                <div class="h-52 bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center">
+                    <span class="text-white text-7xl jindo-font drop-shadow-lg">🎮</span>
+                </div>
+                <div class="p-8 flex-grow text-center">
+                    <h2 class="text-2xl jindo-font text-slate-800">Casual Games</h2>
+                    <p class="text-slate-500 mt-3 text-sm font-medium">Relaxing games designed for everyone.</p>
+                </div>
+                <div class="p-8 pt-0">
+                    <a href="https://play.google.com/store/apps/dev?id=7027591060966947999" 
+                       class="block w-full text-center py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-[1.5rem] font-bold text-lg shadow-lg shadow-indigo-100">
+                       View All
+                    </a>
+                </div>
+            </div>
 
-    <div class="bg-white p-6 rounded-xl shadow-sm border flex flex-col justify-between">
-        <div>
-            <h2 class="text-xl font-bold text-indigo-600">Deep Link Tester</h2>
-            <p class="text-slate-600 mt-2 text-sm">A utility for Android Tech Leads to debug intent filters and URI schemes.</p>
-        </div>
-        <div class="mt-6 flex flex-col gap-2">
-            <a href="https://play.google.com/store/apps/details?id=dev.tools.themightymidgets.deeplinktester" 
-               class="text-center px-4 py-2 bg-slate-800 text-white rounded-lg font-medium">Play Store</a>
-            <a href="/privacy-policy.html" class="text-center text-xs text-slate-400 hover:text-indigo-600 underline">Privacy Policy</a>
-        </div>
-    </div>
-</main>
+            <div class="app-card overflow-hidden shadow-sm flex flex-col">
+                <div class="h-52 bg-slate-800 flex items-center justify-center">
+                    <div class="w-24 h-24 bg-slate-700 rounded-3xl flex items-center justify-center border-2 border-slate-600 shadow-inner">
+                        <span class="text-5xl">🛠️</span>
+                    </div>
+                </div>
+                <div class="p-8 flex-grow text-center">
+                    <h2 class="text-2xl jindo-font text-slate-800">Dev Tools</h2>
+                    <p class="text-slate-500 mt-3 text-sm font-medium">Utilities to help developers build better.</p>
+                </div>
+                <div class="p-8 pt-0">
+                    <a href="https://play.google.com/store/apps/details?id=dev.tools.themightymidgets.deeplinktester" 
+                       class="block w-full text-center py-4 bg-slate-800 hover:bg-slate-900 text-white rounded-[1.5rem] font-bold text-lg shadow-lg shadow-slate-100">
+                       Explore
+                    </a>
+                </div>
+            </div>
 
-    <footer class="mt-12 py-8 bg-slate-100 text-center text-sm text-slate-500">
-        <a href="/privacy-policy.html" class="hover:underline">Privacy Policy</a> | 
-        <a href="https://play.google.com/store/apps/dev?id=7027591060966947999" class="hover:underline">Developer Page</a>
-        <p class="mt-4">&copy; 2026 The Mighty Midgets</p>
-    </footer>
+            <div class="bg-slate-200/40 border-4 border-dashed border-slate-300 rounded-[2.5rem] flex items-center justify-center p-10 text-center">
+                <div>
+                    <span class="text-5xl grayscale opacity-40">🚀</span>
+                    <h3 class="jindo-font text-slate-400 mt-6 text-xl">More Soon</h3>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="max-w-4xl mx-auto px-6 pb-24 text-center">
+        <div class="bg-indigo-50 rounded-[3rem] p-10 border-4 border-white shadow-inner">
+            <h2 class="text-3xl jindo-font text-indigo-600 mb-4">Support</h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:themightymidgets.dev@gmail.com" class="px-8 py-4 bg-white text-indigo-600 rounded-2xl font-bold shadow-sm border-2 border-indigo-100">✉️ Email Us</a>
+                <a href="/privacy-policy.html" class="px-8 py-4 bg-indigo-100 text-indigo-600 rounded-2xl font-bold">📄 Privacy</a>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
